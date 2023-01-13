@@ -1,0 +1,147 @@
+body{
+       margin: 0%;
+}
+#navbar{
+       display: flex;
+       flex-direction: row;
+       width: 100%;
+}
+#navbar1stPart{
+       display: flex;
+       flex-direction: column;
+       width: 32%;
+}
+#navbar2ndPart{
+       display: flex;
+       width: 32%;
+       justify-content: center;
+       align-items: center;
+       margin: auto;
+       width: 200px;
+       height: 100px;
+       box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+#navbar3rdPart{
+       display: flex;
+       flex-direction: column;
+       width: 32%;
+       background-color: aquamarine;
+}
+#navbar3rdPartTopPart{
+       height: 50%;
+       background-color: burlywood;
+       font-family: 'Kalpurush', Arial, sans-serif !important;
+}
+#navbar3rdPartBottomPart{
+       height: 50%;
+       background-color: rgb(123, 240, 170);
+}
+#clock{
+       font-family: 'Courier New', Courier, monospace;
+       text-align: center;
+       align-items: center;
+       align-content: center;
+       align-self: center;
+       font-size: 25px;
+}
+#mainContent{
+       display: flex;
+       flex-direction: row;
+}
+#calculator{
+       background-color: rgba(130, 235, 156, 0.685);
+       width: 200px;
+       height: 200px;
+       text-align: center;
+       border-radius: 1rem;
+       margin: 10px;
+}
+#fakeWord{
+       background-color: rgb(230, 141, 190);
+       width: 200px;
+       height: 200px;
+       text-align: center;
+}
+
+#hiddenCalculator{
+       flex-direction: column;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+#calubutton{
+       width: 50px;
+       height: 80px;
+       margin: 10px 10px 10px 10px;
+       font-size: 30px;
+}
+#calubuttonstore{
+       width: 50px;
+       height: 80px;
+       margin: 10px 10px 10px 10px;
+       font-size: 30px;
+       background-color: rgb(255, 144, 144);
+       border: 1px solid rgba(54, 54, 54, 0.63);
+}
+#clearAll{
+       width: 100px;
+       height: 50px;
+       margin: 10px 0px 10px 30% ;
+}
+#calc{
+       padding: 5px;
+       outline: none;
+       font-size: 21px;
+       border: 5px solid rgba(130, 255, 156, 0.685);
+       margin-left: 4px;
+}
+#hiddenCalculator{
+       display: none;
+       flex-direction: column;
+       background-color: rgba(130, 235, 156, 0.685);
+       border: 2px solid rgba(130, 255, 156, 0.685);
+       border-radius: 1rem;
+       margin: 10px;
+}
+#closediv{
+       display: flex; 
+       flex-direction: column; 
+       text-align: end;
+}
+#closemark{
+       margin-right: 8px;
+}
+.fa-xmark{
+       color: rgb(255, 144, 144);
+}
+#textAreaNoteMaker{
+       display: none;
+       background-color: transparent;
+       border-radius: 0px 0px 1rem 1rem;
+       resize: none;
+       padding: 10px;
+       font-size: 20px;
+       outline: none;
+       border: 3px solid rgb(89, 106, 190);
+       width: 674px;
+       height: 345px;
+}
+#noteMaker{
+       background-color: rgb(141, 162, 230);
+       width: 200px;
+       height: 200px;
+       text-align: center;
+       margin: 10px;
+       border-radius: 1rem;
+}
+#closeMarkNoteMaker{
+       color: rgb(254, 255, 217);
+       text-align: right;
+}

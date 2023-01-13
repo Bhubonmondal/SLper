@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <title>SLper</title>
+       <link rel="stylesheet" href="style.css">
+       <link rel="stylesheet" href="CDN6_0_2.css">
+       <link rel="stylesheet" href="https://fonts.maateen.me/kalpurush/font.css" >
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.3.0/css/all.min.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/2.0.0/css/font-awesome-ie7.css">
+       
+</head>
+<body>
+       <div id="navbar">
+              <div id="navbar1stPart" >
+                     <h3>Contact Info</h3>
+                     <p><i class="fas fa-phone-square-alt"></i> 9875156525</p>
+                     <p><i class="far fa-envelope"></i> example@gmail.com</p>
+              </div>
+              <div id="navbar2ndPart">
+                     <p id="clock"></p>
+              </div>
+              <div id="navbar3rdPart">
+                     <div id="navbar3rdPartTopPart">
+                            <p ><i class="fa-solid fa-bell-on"></i>Lorem ipsum dolor adipisicing elit. Nulla, hic.</p>
+                     </div>
+                     <div id="navbar3rdPartBottomPart"></div>
+              </div>
+       </div>
+       <div id="mainContent" >
+              <div id="calculator" onclick="calculator()">
+                     <p id="calculatorName">Calculator</p>
+                     <i id="calculatorLogo" class="fas fa-calculator-alt fa-4x"></i>
+              </div>
+              <div id="hiddenCalculator">
+                     <div style="display: flex; flex-direction: column; text-align: end;">
+                            <i id="closemark" onclick="closeMarkIcon()" class="fa-solid fa-xmark fa-2x"></i>
+                     </div> 
+                     <div id="allButtons">
+                            <form name = "form1" id="form1">
+	
+                                   <!-- This input box shows the button pressed by the user in calculator. -->
+                              <input id = "calc" type ="text" name = "answer"> <br> <br>
+                              <!-- Display the calculator button on the screen. -->
+                              <!-- onclick() function display the number prsses by the user. -->
+                              <input id="calubutton" type = "button" value = "1" onclick = "form1.answer.value += '1' ">
+                              <input id="calubutton" type = "button" value = "2" onclick = "form1.answer.value += '2' ">
+                              <input id="calubutton" type = "button" value = "3" onclick = "form1.answer.value += '3' ">
+                               <input id="calubutton" type = "button" value = "+" onclick = "form1.answer.value += '+' ">
+                              <br> <br>
+                              
+                              <input id="calubutton" type = "button" value = "4" onclick = "form1.answer.value += '4' ">
+                              <input id="calubutton" type = "button" value = "5" onclick = "form1.answer.value += '5' ">
+                              <input id="calubutton" type = "button" value = "6" onclick = "form1.answer.value += '6' ">
+                              <input id="calubutton" type = "button" value = "-" onclick = "form1.answer.value += '-' ">
+                              <br> <br>
+                              
+                              <input id="calubutton" type = "button" value = "7" onclick = "form1.answer.value += '7' ">
+                              <input id="calubutton" type = "button" value = "8" onclick = "form1.answer.value += '8' ">
+                              <input id="calubutton" type = "button" value = "9" onclick = "form1.answer.value += '9' ">
+                              <input id="calubutton" type = "button" value = "×" onclick = "form1.answer.value += '*' ">
+                              <br> <br>
+                              
+                              
+                              <input id="calubutton" type = "button" value = "÷" onclick = "form1.answer.value += '/' ">
+                              <input id="calubutton" type = "button" value = "0" onclick = "form1.answer.value += '0' ">
+                                <input id="calubutton" type = "button" value = "." onclick = "form1.answer.value += '.' ">
+                                   <!-- When we click on the '=' button, the onclick() shows the sum results on the calculator screen. -->
+                              <input id="calubuttonstore" type = "button" value = "=" onclick = "form1.answer.value = eval(form1.answer.value) ">
+                              <br> 
+                              <!-- Display the Cancel button and erase all data entered by the user. -->
+                              <input id="clearAll" type = "button" value = "Clear All" onclick = "form1.answer.value = ' ' " id= "clear" >
+                              <br> 
+                              
+                            </form>         
+                     </div>   
+                   
+              </div>
+              <div id="noteMaker" onclick="noteMaker()">
+                    <i id="closeMarkNoteMaker" onclick="closeMarkNoteMaker()" class="fa-solid fa-xmark fa-2x"></i>
+                    <textarea name="textAreaNoteMakername" id="textAreaNoteMaker" cols="30" rows="10" placeholder="type something..."></textarea>
+              </div>
+              
+       </div>
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
