@@ -50,15 +50,46 @@ function closeMarkIcon(){
 }
 
 
-function noteMaker(){
+function noteMakerLogo(){
+       document.getElementById('noteMakerLogo').style.display="none";   
+       document.getElementById('noteMakerContent').style.display="flex";
+       document.getElementById('noteMakerContent').style.flexDirection="column";
        document.getElementById('noteMaker').style.width="700px";
        document.getElementById('noteMaker').style.height="400px";
-       document.getElementById('textAreaNoteMaker').style.display="flex";  
 }
 function closeMarkNoteMaker(){
-       document.getElementById('textAreaNoteMaker').style.display="none"; 
+       document.getElementById('noteMakerLogo').style.display="flex";   
+       document.getElementById('noteMakerContent').style.display="none";
        document.getElementById('noteMaker').style.width="200px";
        document.getElementById('noteMaker').style.height="200px";
-        
+       
+}
+
+
+var qrcode = new QRCode("contactNo", {
+       text: "9875156525",
+       width: 50,
+       height: 50,
+       colorDark : "#000000",
+       colorLight : "#ffffff",
+       correctLevel : QRCode.CorrectLevel.H
+   });
+
+var qrcode = new QRCode("ContactInfo", {
+       text: "Eren Yeger",
+       width: 50,
+       height: 50,
+       colorDark : "#000000",
+       colorLight : "#ffffff",
+       correctLevel : QRCode.CorrectLevel.H
+   });
+   
+
+function showqrcode(x){
+       x.style.display="flex";
+}
+
+function hideqrcode(x){
+       x.style.display="none";
 }
 

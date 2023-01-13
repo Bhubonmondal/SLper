@@ -8,14 +8,20 @@
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.3.0/css/all.min.css">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/2.0.0/css/font-awesome-ie7.css">
-       
 </head>
 <body>
        <div id="navbar">
               <div id="navbar1stPart" >
-                     <h3>Contact Info</h3>
-                     <p><i class="fas fa-phone-square-alt"></i> 9875156525</p>
-                     <p><i class="far fa-envelope"></i> example@gmail.com</p>
+                     <div style="display: flex; flex-direction: row;">
+                            <h3 onmouseover="showqrcode(ContactInfo)" onmouseout="hideqrcode(ContactInfo)">Contact Info</h3>
+                            <div  id="ContactInfo" style="display: none;"></div>
+                     </div>
+                    
+                     <div style="display: flex;flex-direction: row;">
+                            <p onmouseover="showqrcode(contactNo)" onmouseout="hideqrcode(contactNo)"><i class="fas fa-phone-square-alt" ></i> 9875156525</p>
+                            <div id="contactNo"></div>
+                     </div>
+                     <p><i class="far fa-envelope" id="email_id"></i> example@gmail.com</p>
               </div>
               <div id="navbar2ndPart">
                      <p id="clock"></p>
@@ -27,6 +33,7 @@
                      <div id="navbar3rdPartBottomPart"></div>
               </div>
        </div>
+       <hr>
        <div id="mainContent" >
               <div id="calculator" onclick="calculator()">
                      <p id="calculatorName">Calculator</p>
@@ -38,11 +45,9 @@
                      </div> 
                      <div id="allButtons">
                             <form name = "form1" id="form1">
-	
-                                   <!-- This input box shows the button pressed by the user in calculator. -->
+
                               <input id = "calc" type ="text" name = "answer"> <br> <br>
-                              <!-- Display the calculator button on the screen. -->
-                              <!-- onclick() function display the number prsses by the user. -->
+
                               <input id="calubutton" type = "button" value = "1" onclick = "form1.answer.value += '1' ">
                               <input id="calubutton" type = "button" value = "2" onclick = "form1.answer.value += '2' ">
                               <input id="calubutton" type = "button" value = "3" onclick = "form1.answer.value += '3' ">
@@ -65,10 +70,10 @@
                               <input id="calubutton" type = "button" value = "÷" onclick = "form1.answer.value += '/' ">
                               <input id="calubutton" type = "button" value = "0" onclick = "form1.answer.value += '0' ">
                                 <input id="calubutton" type = "button" value = "." onclick = "form1.answer.value += '.' ">
-                                   <!-- When we click on the '=' button, the onclick() shows the sum results on the calculator screen. -->
+
                               <input id="calubuttonstore" type = "button" value = "=" onclick = "form1.answer.value = eval(form1.answer.value) ">
                               <br> 
-                              <!-- Display the Cancel button and erase all data entered by the user. -->
+
                               <input id="clearAll" type = "button" value = "Clear All" onclick = "form1.answer.value = ' ' " id= "clear" >
                               <br> 
                               
@@ -76,13 +81,18 @@
                      </div>   
                    
               </div>
-              <div id="noteMaker" onclick="noteMaker()">
-                    <i id="closeMarkNoteMaker" onclick="closeMarkNoteMaker()" class="fa-solid fa-xmark fa-2x"></i>
-                    <textarea name="textAreaNoteMakername" id="textAreaNoteMaker" cols="30" rows="10" placeholder="type something..."></textarea>
-              </div>
-              
+              <div id="noteMaker">
+                     <div id="noteMakerLogo" onclick="noteMakerLogo()">
+                            <p>Notepad</p>
+                            <i class="fas fa-sticky-note fa-4x"></i>
+                     </div>
+                     <div id="noteMakerContent">
+                            <i id="closeMarkNoteMaker" onclick="closeMarkNoteMaker()" class="fa-solid fa-xmark fa-2x"></i>
+                            <textarea name="textAreaNoteMakername" id="textAreaNoteMaker" cols="30" rows="10" placeholder="type something..."></textarea>
+                    </div>
+              </div>   
        </div>
-<script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+<script src="qrcode.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
