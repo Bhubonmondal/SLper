@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
        <title>SLper</title>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <link rel="stylesheet" href="style.css">
        <link rel="stylesheet" href="CDN6_0_2.css">
        <link rel="stylesheet" href="https://fonts.maateen.me/kalpurush/font.css" >
@@ -90,9 +93,31 @@
                             <i id="closeMarkNoteMaker" onclick="closeMarkNoteMaker()" class="fa-solid fa-xmark fa-2x"></i>
                             <textarea name="textAreaNoteMakername" id="textAreaNoteMaker" cols="30" rows="10" placeholder="type something..."></textarea>
                     </div>
+              </div>
+              <div id="fakeWord" >
+                     <div id="fakeWordLogo" onclick="fakeWordLogo()">
+                            <p>MS Word</p>
+                            <i class="fa-solid fa-file-word fa-4x"></i>
+                     </div>
+                     <div id="fakeWordContent" >
+                            <div style="text-align: right;margin: 10px;">
+                                   <i id="closeMarkFakeWord" onclick="closeMarkFakeWord()" class="fa-solid fa-xmark fa-2x"></i>
+                            </div>
+                            <ul>
+                                   <li id="fileList" onmousedown="fileList()" onmouseup="fileListHover()"> <span id="fileText">File</span> </li>
+                                   <li id="homeList" onmousedown="homeList()" onmouseup="homeListHover()"> <span id="homeText">Home</span> </li>
+                                   <li id="insertList" onmousedown="insertList()" onmouseup="insertListHover()"> <span id="insertText">Insert</span> </li>
+                                   <li id="layoutList" onmousedown="layoutList()" onmouseup="layoutListHover()"> <span id="layoutText">Layout</span> </li>
+                            </ul>
+                            <div id="wordTextAreaDiv">
+                                   <button onclick="newTextAreaMakerButton()">Create New</button>
+                                   <textarea id="fakeWordTextArea"></textarea>
+                            </div>
+                            
+                     </div>
               </div>   
        </div>
-<script src="qrcode.js"></script>
 <script src="script.js"></script>
+<script src="qrcode.js"></script>
 </body>
 </html>

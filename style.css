@@ -54,12 +54,84 @@ body{
        margin: 10px;
 }
 #fakeWord{
-       background-color: rgb(230, 141, 190);
+       text-align: center;
+       margin: 10px;
        width: 200px;
        height: 200px;
-       text-align: center;
+       background-color: rgb(230, 141, 190);
+       border-radius: 1rem;
 }
+#fakeWordLogo{
+       width: 200px;
+       height: 200px;
+}
+#fakeWordContent{
+       font-family: "Segoe UI";
+       display: none;
+       width: 900px;
+       height: 500px;
+       background-color: #e6e6e6;
+       border-radius: 1rem;
+}
+#fakeWordTextArea{
+       background-color: #ffffff;
+       outline: none;
+       resize: none;
+       border: 1px solid #c6c6c6;
+       font-size: 24px;
 
+       width: 400px;
+       height: 50px;
+       font-size: 16px;
+       padding: 10px;
+}
+ul li{
+       list-style: none;
+       padding: 2px 10px 2px 10px;
+       cursor: default;
+       background-color: #f3f2f1;
+       width: 50px;
+}
+ul{
+       display: flex;    
+       background-color: #f3f2f1;
+       height: 25px;
+       width: 860px;
+       max-width: 860px;
+}
+#fileText{
+       user-select: none;
+}
+#fileText:hover{
+       border-bottom: 0px;
+}
+#fileList:hover{
+       background-color: #faf9f8;
+       font-weight: 500;
+}
+#homeList:hover{
+       background-color: #faf9f8;
+       border-bottom: 3px solid #2b579a;
+}
+#homeText{
+       border-bottom: 2px solid #2b579a;
+       font-weight: 500;
+       user-select: none;
+}
+#insertText{
+       user-select: none;
+}
+#insertList:hover{
+       background-color: #faf9f8;
+       font-weight: 500;
+}
+#layoutText{
+       user-select: none;
+}
+#layoutList:hover{
+       background-color: #faf9f8;
+       font-weight: 500;
+}
 #hiddenCalculator{
        flex-direction: column;
 }
@@ -69,10 +141,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
+
 #calubutton{
        width: 50px;
        height: 80px;
@@ -119,7 +188,7 @@ input[type=number] {
        color: rgb(255, 144, 144);
 }
 #textAreaNoteMaker{
-       background-color: transparent;
+       background-color: rgb(141, 162, 230);
        border-radius: 0px 0px 1rem 1rem;
        resize: none;
        padding: 10px;
@@ -130,17 +199,27 @@ input[type=number] {
        height: 345px;
 }
 #noteMaker{
+       margin: 5px;
        background-color: rgb(141, 162, 230);
+       border-radius: 1rem;
+       margin: 10px;
+       text-align: end;
+}
+#noteMakerLogo{   
        width: 200px;
        height: 200px;
        text-align: center;
+}
+#closeMarkNoteMaker{
+       background-color: rgb(141, 162, 230);
+       color: rgb(254, 255, 217);
+       align-items: center;
        margin: 10px;
        border-radius: 1rem;
 }
-#closeMarkNoteMaker{
-       color: rgb(254, 255, 217);
-       align-items: center;
-}
+textarea::placeholder{
+       color: red;
+   }
 #contactNo{
        margin-left: 10px;
        display: none;
@@ -149,6 +228,10 @@ input[type=number] {
        display: none;
 }
 #noteMakerLogo{
+       display: flex;
+       flex-direction: column;
+}
+#wordTextAreaDiv{
        display: flex;
        flex-direction: column;
 }

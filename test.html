@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        textarea {
+            width: 100%;
+            height: 100px;
+            font-size: 16px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="YourDivId" style="background-color: aquamarine;">
+        <p>hey</p>
+    </div>
+
+
+    <script>
+        var newTextarea = document.createElement("textarea");
+
+        if (textarea.scrollHeight > textarea.offsetHeight) {
+        var div = document.getElementById("YourDivId");
+        div.appendChild(newTextarea);
+        newTextarea.style.outline="none";
+        newTextarea.addEventListener("input", createTextarea);
+        }
+
+    </script>
+</body>
+</html>

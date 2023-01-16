@@ -65,6 +65,17 @@ function closeMarkNoteMaker(){
        
 }
 
+function fakeWordLogo(){
+       document.getElementById('fakeWordLogo').style.display="none";
+       document.getElementById('fakeWordContent').style.display="flex"; 
+       document.getElementById('fakeWordContent').style.flexDirection="column";
+}
+function closeMarkFakeWord(){
+       document.getElementById('fakeWordContent').style.display="none"; 
+       document.getElementById('fakeWordLogo').style.display="flex";
+       document.getElementById('fakeWordLogo').style.flexDirection="column";
+       document.getElementById('fakeWordLogo').style.textAlign="center";
+}
 
 var qrcode = new QRCode("contactNo", {
        text: "9875156525",
@@ -75,16 +86,36 @@ var qrcode = new QRCode("contactNo", {
        correctLevel : QRCode.CorrectLevel.H
    });
 
-var qrcode = new QRCode("ContactInfo", {
-       text: "Eren Yeger",
-       width: 50,
-       height: 50,
+
+   
+   //////////////////////
+   
+   const contact = {
+       name: "John Doe",
+       phone: "555-555-5555",
+       email: "johndoe@example.com",
+       address: "1234 Example St., Example City, Example State 12345, USA"
+   };
+   
+   const vCard = `BEGIN:VCARD
+   VERSION:3.0
+   N:${contact.name}
+   TEL;TYPE=CELL:${contact.phone}
+   EMAIL:${contact.email}
+   ADR;TYPE=HOME:;;${contact.address}
+   END:VCARD`;
+   
+   var qrcode = new QRCode("ContactInfo", {
+       text: vCard,
+       width: 100,
+       height: 100,
        colorDark : "#000000",
        colorLight : "#ffffff",
        correctLevel : QRCode.CorrectLevel.H
    });
    
 
+   /////////////////////
 function showqrcode(x){
        x.style.display="flex";
 }
@@ -92,4 +123,112 @@ function showqrcode(x){
 function hideqrcode(x){
        x.style.display="none";
 }
+
+////Fake Word/////
+function fileList(){
+       document.getElementById('fileText').style.fontWeight="500";
+       document.getElementById('fileText').style.borderBottom="2px solid #2b579a";
+       document.getElementById('fileList').style.borderBottom="3px solid #2b579a";
+       document.getElementById('homeText').style.fontWeight="400";
+       document.getElementById('homeText').style.borderBottom="0px";
+       document.getElementById('homeList').style.borderBottom="0px";
+       document.getElementById('insertText').style.fontWeight="400";
+       document.getElementById('insertText').style.borderBottom="0px";
+       document.getElementById('insertList').style.borderBottom="0px";
+       document.getElementById('layoutText').style.fontWeight="400";
+       document.getElementById('layoutText').style.borderBottom="0px";
+       document.getElementById('layoutList').style.borderBottom="0px";
+}
+function fileListHover(){
+       document.getElementById('fileText').style.borderBottom="3px solid #2b579a";
+       document.getElementById('fileList').style.borderBottom="0px";
+}
+
+function homeList(){
+       document.getElementById('homeText').style.fontWeight="500";
+       document.getElementById('homeText').style.borderBottom="2px solid #2b579a";
+       document.getElementById('homeList').style.borderBottom="3px solid #2b579a";
+       document.getElementById('fileText').style.fontWeight="400";
+       document.getElementById('fileText').style.borderBottom="0px";
+       document.getElementById('fileList').style.borderBottom="0px";
+       document.getElementById('insertText').style.fontWeight="400";
+       document.getElementById('insertText').style.borderBottom="0px";
+       document.getElementById('insertList').style.borderBottom="0px";
+       document.getElementById('layoutText').style.fontWeight="400";
+       document.getElementById('layoutText').style.borderBottom="0px";
+       document.getElementById('layoutList').style.borderBottom="0px";
+}
+function homeListHover(){
+       document.getElementById('homeText').style.borderBottom="3px solid #2b579a";
+       document.getElementById('homeList').style.borderBottom="0px";
+}
+
+function insertList(){
+       document.getElementById('insertText').style.fontWeight="500";
+       document.getElementById('insertText').style.borderBottom="2px solid #2b579a";
+       document.getElementById('insertList').style.borderBottom="3px solid #2b579a";
+       document.getElementById('homeText').style.fontWeight="400";
+       document.getElementById('homeText').style.borderBottom="0px";
+       document.getElementById('homeList').style.borderBottom="0px";
+       document.getElementById('fileText').style.fontWeight="400";
+       document.getElementById('fileText').style.borderBottom="0px";
+       document.getElementById('fileList').style.borderBottom="0px";
+       document.getElementById('layoutText').style.fontWeight="400";
+       document.getElementById('layoutText').style.borderBottom="0px";
+       document.getElementById('layoutList').style.borderBottom="0px";
+}
+function insertListHover(){
+       document.getElementById('insertText').style.borderBottom="3px solid #2b579a";
+       document.getElementById('insertList').style.borderBottom="0px";
+}
+
+function layoutList(){
+       document.getElementById('layoutText').style.fontWeight="500";
+       document.getElementById('layoutText').style.borderBottom="2px solid #2b579a";
+       document.getElementById('layoutList').style.borderBottom="3px solid #2b579a";
+       document.getElementById('homeText').style.fontWeight="400";
+       document.getElementById('homeText').style.borderBottom="0px";
+       document.getElementById('homeList').style.borderBottom="0px";
+       document.getElementById('insertText').style.fontWeight="400";
+       document.getElementById('insertText').style.borderBottom="0px";
+       document.getElementById('insertList').style.borderBottom="0px";
+       document.getElementById('fileText').style.fontWeight="400";
+       document.getElementById('fileText').style.borderBottom="0px";
+       document.getElementById('fileList').style.borderBottom="0px";
+}
+function layoutListHover(){
+       document.getElementById('layoutText').style.borderBottom="3px solid #2b579a";
+       document.getElementById('layoutList').style.borderBottom="0px";
+}
+
+var textarea = document.getElementById("fakeWordTextArea");
+
+
+    if (textarea.scrollHeight > textarea.offsetHeight) {
+
+
+        document.getElementById("YourDivId").appendChild(document.createElement("textarea"));
+
+
+    }
+
+
+function newTextAreaMakerButton(){
+       let div = document.getElementById("wordTextAreaDiv");
+       let newTextArea = document.createElement("textarea");
+
+       if (textarea.scrollHeight > textarea.offsetHeight) {
+              div.appendChild(newTextArea);
+              newTextArea.style.width="400px";
+              newTextArea.style.height="50px";
+              newTextArea.style.resize="none";
+              newTextArea.style.outline="none";
+       }
+
+       var height = fakeWordTextArea.offsetHeight;
+       fakeWordTextArea.value = "Hello world";
+
+       console.log(height);
+}
+
 
